@@ -70,11 +70,13 @@
         margin: 0;
       }
 
-      .container {
+      section {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
       }
 
       img {
@@ -93,6 +95,7 @@
         font-size: 3rem;
         font-weight: 400;
         margin: 0;
+        text-align: center;
       }
 
       .text h1 span {
@@ -104,15 +107,17 @@
         font-size: 1.75rem;
         margin: 0;
         margin-top: 10px;
-        width: 90%;
-        text-align: justify;
-        margin-left: 5%;
+        font-weight: normal;
+        /* width: 90%; */
+        /* text-align: justify; */
+        /* margin-left: 5px; */
+        text-align: center;
       }
-      
-      .text h2 span {
+
+      /* .text h2 span {
         width: 100%;
         display: inline-block;
-      }
+      } */
 
       .socials {
         display: flex;
@@ -138,6 +143,29 @@
         text-align: center;
       }
 
+      .arrow, .arrow::after {
+        position: absolute;
+        border-left: 4px solid #e285f9;
+        border-bottom: 4px solid #e285f9;
+        border-radius: 4px;
+      }
+
+      .arrow {
+        left: 50vw;
+        bottom: 5vh;
+        width: 75px;
+        height: 75px;
+        transform: rotate(-45deg) translateX(-50%);
+      }
+
+      .arrow::after {
+        content: '';
+        left: 10px;
+        width: 65px;
+        height: 65px;
+        bottom: 10px;
+      }
+
       @media screen and (max-width: 800px) {
         :root {
           --bg-grad-deg: 180deg;
@@ -147,7 +175,7 @@
           width: 30vh;
         }
 
-        .container {
+        section {
           flex-direction: column;
         }
 
@@ -163,17 +191,21 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TB9CVM9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="container">
+    <section>
       <img src="/icons/motif-600x600.png">
       <div class="text">
         <h1><span>Stardust</span> <span>Technologies</span></h1>
-        <h2><a href="tel:+442380971127">(+44) 023 8097 1127</a><span> </span></h2>
+        <h2>
+          <a href="mailto:hello@strdst.tech">hello@strdst.tech</a>
+          <!-- <span> </span> -->
+        </h2>
         <div class="socials">
           <a href="https://github.com/strdst" target="_blank">gh/strdst</a>
           <a href="https://twitter.com/strdst_tech" target="_blank">tw/strdst_tech</a>
         </div>
-        <a class="email" href="mailto:hello@strdst.tech">hello@strdst.tech</a>
+        <a class="email" href="tel:+442380971127">(+44) 023 8097 1127</a>
       </div>
-    </div>
+      <!-- <div class="arrow"></div> -->
+    </section>
   </body>
 </html>
